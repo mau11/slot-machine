@@ -10,16 +10,22 @@ const results = document.querySelector("p");
 // Set initial values
 let total = 1000;
 totalLeft.innerText = total;
-first.innerText = "a";
-second.innerText = "b";
-third.innerText = "c";
+first.src = "images/celtics.png";
+second.src = "images/celtics.png";
+third.src = "images/celtics.png";
 
 // Add event listeners to buttons
 smallBet.onclick = () => handleClick(5);
 bigBet.onclick = () => handleClick(50);
 
 // Create randomizer
-const options = ["a", "b", "c", "d", "e"]; // change to image paths
+const options = [
+  "bruins.png",
+  "celtics.png",
+  "patriots.png",
+  "red-sox.png",
+  "celtics-logo.png",
+];
 const count = options.length;
 const getRandomIndex = () => Math.floor(Math.random() * count);
 
@@ -40,14 +46,11 @@ function spinReels(bet) {
   if (total === 0) {
     total = "YOU LOSE";
   } else {
-    first.innerText = options[getRandomIndex()];
-    second.innerText = options[getRandomIndex()];
-    third.innerText = options[getRandomIndex()];
+    first.src = `images/${options[getRandomIndex()]}`;
+    second.src = `images/${options[getRandomIndex()]}`;
+    third.src = `images/${options[getRandomIndex()]}`;
 
-    if (
-      first.innerText === second.innerText &&
-      second.innerText === third.innerText
-    ) {
+    if (first.src === second.src && second.src === third.src) {
       smallBet.disabled = true;
       bigBet.disabled = true;
       results.innerText = "YOU WON";
