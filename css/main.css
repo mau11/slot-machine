@@ -21,6 +21,7 @@ body {
   height: 100vh;
   display: flex;
   justify-content: center;
+  /* Radial gradient background: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient */
   background: radial-gradient(
       circle at top left,
       var(--celtics),
