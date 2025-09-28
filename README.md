@@ -1,29 +1,21 @@
-![Screenshot of completed Slot Machine](./images/screenshot.png)
+# Boston Spin Slot Machine
 
-Deployed on vercel: https://slot-machine-wheat.vercel.app/
+> Place your bets to see which sports team will win!
 
-# 🎰 Week05 Bootcamp2019 Project: Slot Machine
+> <img src="./images/screenshot.png" alt="Screenshot of completed Slot Machine" height="300">
 
-### Goal: Build a Simple Slot Machine
+## Table of Contents
 
-Build a simple slot machine with minimum 5 items per reel and 3 reels - user should be able to bet min or max and have their total update
+1. [Tech Stack](#tech-stack)
+1. [Deployment](#deployment)
 
-### How to submit your code for review:
+## Tech Stack
 
-- Fork and clone this repo
-- Create a new branch called answer
-- Checkout answer branch
-- Push to your fork
-- Issue a pull request
-- Your pull request description should contain the following:
-  - (1 to 5 no 3) I completed the challenge
-  - (1 to 5 no 3) I feel good about my code
-  - Anything specific on which you want feedback!
+- **HTML**
+- **JavaScript**
+- **CSS**
+- **Vercel**
 
-Example:
+## Deployment
 
-```
-I completed the challenge: 5
-I feel good about my code: 4
-I'm not sure if my constructors are setup cleanly...
-```
+You can view the deployed app on Vercel at: https://slot-machine-wheat.vercel.app/
