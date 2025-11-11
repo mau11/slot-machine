@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slot Machine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Boston Spin</h1>
+      <!-- Slot machine -->
+      <section id="slot">
+        <div class="img-wrapper">
+          <img id="first" src="" />
+        </div>
+        <div class="img-wrapper">
+          <img id="second" src="" />
+        </div>
+        <div class="img-wrapper">
+          <img id="third" src="" />
+        </div>
+      </section>
+
+      <section class="bottom">
+        <!-- Enter Bets -->
+        <section id="bets">
+          <button id="smallBet">Bet $5</button>
+          <button id="bigBet">Bet $50</button>
+        </section>
+
+        <!-- Show Total -->
+        <p>Total: $<span></span></p>
+      </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script type="text/javascript" src="js/main.js"></script>
+  </body>
+</html>

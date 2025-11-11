@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Oswald", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+  --bruins: rgba(244, 187, 71, 1);
+  --celtics: rgba(57, 129, 78, 1);
+  --patriots: rgba(9, 33, 66, 1);
+  --red-sox: rgba(174, 60, 62, 1);
+  --shadow: rgba(0, 0, 0, 0.6);
+  --black: rgba(51, 51, 51, 1);
+  --white: rgba(222, 222, 222, 1);
+}
+
+body {
+  max-width: 90vw;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* Radial gradient background: https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/radial-gradient */
+  background: radial-gradient(
+      circle at top left,
+      var(--celtics),
+      transparent 70%
+    ),
+    radial-gradient(circle at top right, var(--patriots), transparent 70%),
+    radial-gradient(circle at bottom left, var(--bruins), transparent 70%),
+    radial-gradient(circle at bottom right, var(--red-sox), transparent 70%);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+h1 {
+  color: var(--patriots);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+#slot {
+  display: flex;
+  height: 300px;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--shadow);
+  border: solid 1px var(--black);
+  border-radius: 10px;
+  box-shadow: 0 0 12px var(--shadow);
+}
+
+.img-wrapper {
+  max-width: 200px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+  }
+}
+
+#bets {
+  margin-top: 2rem;
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+
+  button {
+    background-color: var(--patriots);
+    opacity: 0.9;
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    text-wrap: nowrap;
+  }
+
+  button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px var(--shadow);
+  }
+
+  button:active {
+    transform: scale(0.98);
+  }
+
+  button:disabled {
+    transform: none;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+}
+
+p {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: var(--patriots);
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    height: unset;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  h1 {
+    writing-mode: sideways-lr;
+    margin: 0;
+    font-size: 1.5rem;
+  }
+
+  .bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 4rem;
+    margin-left: 8px;
+  }
+
+  #bets {
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    margin-left: 12px;
+    gap: 1rem;
+  }
+
+  #slot {
+    flex-direction: column;
+    min-height: 90vh;
+    padding: 1rem;
+  }
+}
